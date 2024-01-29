@@ -1,29 +1,68 @@
+# Foobar
+
+Foobar is a Python library for dealing with word pluralization.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+pip install foobar
+```
+
+## Usage
+
+```python
+import foobar
+
+# returns 'words'
+foobar.pluralize('word')
+
+# returns 'geese'
+foobar.pluralize('goose')
+
+# returns 'phenomenon'
+foobar.singularize('phenomena')
+```
 # cl-3 
 * A clone of Tinder App Flutter! https://github.com/dgewe/Tinder-App-Flutter
 * Changes made by interns (not owner) for a group project
 
-# New dependencies added (vivecboots) 1/29/24
- *  cupertino_icons: ^1.0.6
-  modal_progress_hud_nsn: ^0.5.1
-  numberpicker: ^2.1.2
-  image_picker: ^1.0.7
+# New dependencies added (Blair) 1/29/24
+
+*We had to avoid the null values for Dart3
+
+cupertino_icons: ^1.0.6
+ 
+modal_progress_hud_nsn: ^0.5.1
+  
+numberpicker: ^2.1.2
+  
+image_picker: ^1.0.7
+
   firebase_storage: ^11.6.0
+
   firebase_core: ^2.24.2
+
   firebase_auth: ^4.16.0
+
   cloud_firestore: ^4.14.0
+
   percent_indicator: ^4.2.3
+
   shared_preferences: ^2.2.2
+
   provider: ^6.1.1
   intl: ^0.19.0
 
 
 # More todo
-*We also have a couple extra things to do to get it started.   Look at the bottom of the terminal output.  
+We also have a couple extra things to do to get it started.   Look at the bottom of the terminal output.  
 
 
 * in android studio run 'flutter pub get'  
 *an output will be given and we have more items to update.  Please help me update these files including firebase (bottom of terminal output)
-Resolving dependencies... (1.8s)
+```Resolving dependencies... (1.8s)
 + _flutterfire_internals 1.3.16
 > async 2.11.0 (was 2.5.0)
 > boolean_selector 2.1.1 (was 2.1.0)
@@ -108,8 +147,20 @@ This app is using a deprecated version of the Android embedding.
 To avoid unexpected runtime failures, or future build failures, try to migrate this app to the V2 embedding.
 Take a look at the docs for migrating an app: https://github.com/flutter/flutter/wiki/Upgrading-pre-1.12-Android-projects
 The plugin `cloud_firestore` requires your app to be migrated to the Android embedding v2. Follow the steps on the migration doc above and re-run this command.  
+```
 
 
+## Todo List
+lets add a license later
+
+Lets finish up getting this working with Android studio
+
+Get Firebase working as a part of this
+
+Determine what may be missing
+
+Look at what we can use as a background to implement what Chetna and other UX/UI interns have put together. These will be "Material" but from three years ago.  Be aware of discrepencies resulting from the age of the repo.  
+ 
 ## Setup
 
 #### Requirements

@@ -39,7 +39,7 @@ class UserProvider extends ChangeNotifier {
     Response<dynamic> response = await _authSource.register(
         userRegistration.email, userRegistration.password);
     if (response is Success<UserCredential>) {
-      String id = (response as Success<UserCredential>).value.user.uid;
+      String id = (response).value.user.uid;
       response = await _storageSource.uploadUserProfilePhoto(
           userRegistration.localProfilePhotoPath, id);
 
@@ -61,7 +61,7 @@ class UserProvider extends ChangeNotifier {
   }
 
   Future<AppUser> _getUser() async {
-    if (_user != null) return _user;
+    return _user;
     String id = await SharedPreferencesUtil.getUserId();
     _user = AppUser.fromSnapshot(await _databaseSource.getUser(id));
     return _user;

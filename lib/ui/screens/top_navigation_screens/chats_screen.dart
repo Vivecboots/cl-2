@@ -34,7 +34,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
               builder: (context, userSnapshot) {
                 return CustomModalProgressHUD(
                   inAsyncCall:
-                      userProvider.user == null || userProvider.isLoading,
+                      userProvider.isLoading,
                   child: (userSnapshot.hasData)
                       ? FutureBuilder<List<ChatWithUser>>(
                           future: userProvider
@@ -52,7 +52,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                           child: Text('No matches',
                                               style: Theme.of(context)
                                                   .textTheme
-                                                  .headline4)),
+                                                  .headlineMedium)),
                                     )
                                   : ChatsList(
                                       chatWithUserList:

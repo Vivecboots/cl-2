@@ -67,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   Text(
                     'Login to your account',
-                    style: Theme.of(context).textTheme.headline3,
+                    style: Theme.of(context).textTheme.displaySmall,
                   ),
                   SizedBox(height: 40),
                   BorderedTextField(

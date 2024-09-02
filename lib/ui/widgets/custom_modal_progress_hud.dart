@@ -40,9 +40,7 @@ class CustomModalProgressHUD extends StatelessWidget {
     this.offset,
     this.dismissible = false,
     @required this.child,
-  })  : assert(child != null),
-        assert(inAsyncCall != null),
-        super(key: key);
+  })  : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,16 +48,12 @@ class CustomModalProgressHUD extends StatelessWidget {
     widgetList.add(child);
     if (inAsyncCall) {
       Widget layOutProgressIndicator;
-      if (offset == null)
-        layOutProgressIndicator = Center(child: progressIndicator);
-      else {
-        layOutProgressIndicator = Positioned(
-          child: progressIndicator,
-          left: offset.dx,
-          top: offset.dy,
-        );
-      }
-      final modal = [
+      layOutProgressIndicator = Positioned(
+        child: progressIndicator,
+        left: offset.dx,
+        top: offset.dy,
+      );
+          final modal = [
         new Opacity(
           child: new ModalBarrier(dismissible: dismissible, color: color),
           opacity: opacity,

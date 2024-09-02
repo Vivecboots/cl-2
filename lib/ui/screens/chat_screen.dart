@@ -38,13 +38,11 @@ class ChatScreen extends StatelessWidget {
   bool shouldShowTime(Message currMessage, Message messageBefore) {
     int halfHourInMilli = 1800000;
 
-    if (messageBefore != null) {
-      if ((messageBefore.epochTimeMs - currMessage.epochTimeMs).abs() >
-          halfHourInMilli) {
-        return true;
-      }
+    if ((messageBefore.epochTimeMs - currMessage.epochTimeMs).abs() >
+        halfHourInMilli) {
+      return true;
     }
-    return messageBefore == null;
+      return messageBefore == null;
   }
 
   @override
@@ -150,7 +148,7 @@ class ChatScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(4)),
               child: Text(
                 "SEND",
-                style: Theme.of(context).textTheme.bodyText1,
+                style: Theme.of(context).textTheme.bodyLarge,
               ),
               onPressed: () {
                 sendMessage(myUserId);

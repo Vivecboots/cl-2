@@ -28,7 +28,7 @@ class MessageBubble extends StatelessWidget {
                   child: Container(
                     child: Text(convertEpochMsToDateTime(epochTimeMs),
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.bodyText1.copyWith(
+                        style: Theme.of(context).textTheme.bodyLarge.copyWith(
                             fontSize: 14, fontWeight: FontWeight.normal)),
                     width: double.infinity,
                   ),
@@ -46,7 +46,7 @@ class MessageBubble extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 child: Text(
                   text,
-                  style: Theme.of(context).textTheme.bodyText1.copyWith(
+                  style: Theme.of(context).textTheme.bodyLarge.copyWith(
                       color: isSenderMyUser ? kSecondaryColor : Colors.black,
                       fontWeight: FontWeight.normal),
                 ),

@@ -28,7 +28,7 @@ class StartScreen extends StatelessWidget {
                       'Lorel ipsum dolor sit amet, consectetur adipiscing elit. '
                       'Nulla in orci justo. Curabitur ac gravida quam.',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.bodyText1,
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ),
                 ),

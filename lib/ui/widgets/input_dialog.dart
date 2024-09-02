@@ -44,7 +44,7 @@ class _InputDialogState extends State<InputDialog> {
           color: kColorPrimaryVariant,
           child: Text(
             'CANCEL',
-            style: Theme.of(context).textTheme.bodyText1,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -54,7 +54,7 @@ class _InputDialogState extends State<InputDialog> {
           color: kAccentColor,
           child: Text(
             'SAVE',
-            style: Theme.of(context).textTheme.bodyText1,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
           onPressed: () {
             widget.onSavePressed(inputText);

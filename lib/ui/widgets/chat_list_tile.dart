@@ -10,15 +10,15 @@ class ChatListTile extends StatelessWidget {
   final String myUserId;
 
   ChatListTile(
-      {@required this.chatWithUser,
-      @required this.onTap,
-      @required this.onLongPress,
-      @required this.myUserId});
+      {required this.chatWithUser,
+      required this.onTap,
+      required this.onLongPress,
+      required this.myUserId});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap:() => onTap(), // ensure onTap is call correctly
       onLongPress: () {},
       child: Container(
         height: 60,
@@ -106,8 +106,7 @@ class ChatListTile extends StatelessWidget {
         ),
         SizedBox(
             width: 40,
-            child: chatWithUser.chat.lastMessage == null ||
-                    isLastMessageSeen() == false
+            child: isLastMessageSeen() == false
                 ? Container(
                     width: 8,
                     height: 8,

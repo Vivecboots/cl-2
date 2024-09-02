@@ -5,7 +5,7 @@ import 'package:tinder_app_flutter/util/constants.dart';
 class ChatTopBar extends StatelessWidget {
   final AppUser user;
 
-  ChatTopBar({@required this.user});
+  ChatTopBar({required this.user}); //remove @
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class ChatTopBar extends StatelessWidget {
           children: [
             Text(
               user.name,
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           ],
         ),

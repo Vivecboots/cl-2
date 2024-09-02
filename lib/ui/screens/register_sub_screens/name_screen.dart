@@ -16,11 +16,11 @@ class NameScreen extends StatelessWidget {
             children: [
               Text(
                 'My first',
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
               Text(
                 'name is',
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
             ],
           ),

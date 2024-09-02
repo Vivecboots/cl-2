@@ -36,7 +36,7 @@ class _AddPhotoScreenState extends State<AddPhotoScreen> {
         children: [
           Text(
             'Add photo',
-            style: Theme.of(context).textTheme.headline3,
+            style: Theme.of(context).textTheme.displaySmall,
           ),
           Expanded(
             child: Column(

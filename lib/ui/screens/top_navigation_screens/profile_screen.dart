@@ -40,14 +40,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
               builder: (context, userSnapshot) {
                 return CustomModalProgressHUD(
                     inAsyncCall:
-                        userProvider.user == null || userProvider.isLoading,
+                        userProvider.isLoading,
                     child: userSnapshot.hasData
                         ? Column(children: [
                             getProfileImage(userSnapshot.data, userProvider),
                             SizedBox(height: 20),
                             Text(
                                 '${userSnapshot.data.name}, ${userSnapshot.data.age}',
-                                style: Theme.of(context).textTheme.headline4),
+                                style: Theme.of(context).textTheme.headlineMedium),
                             SizedBox(height: 40),
                             getBio(userSnapshot.data, userProvider),
                             Expanded(child: Container()),
@@ -71,7 +71,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Bio', style: Theme.of(context).textTheme.headline4),
+            Text('Bio', style: Theme.of(context).textTheme.headlineMedium),
             RoundedIconButton(
               onPressed: () {
                 showDialog(
@@ -92,7 +92,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         SizedBox(height: 5),
         Text(
           user.bio.length > 0 ? user.bio : "No bio.",
-          style: Theme.of(context).textTheme.bodyText1,
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
       ],
     );

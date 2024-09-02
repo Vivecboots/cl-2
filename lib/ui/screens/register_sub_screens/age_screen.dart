@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:numberpicker/numberpicker.dart';
 
 class AgeScreen extends StatefulWidget {
@@ -26,11 +24,11 @@ class _AgeScreenState extends State<AgeScreen> {
             children: [
               Text(
                 'My',
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
               Text(
                 'age is',
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
             ],
           ),

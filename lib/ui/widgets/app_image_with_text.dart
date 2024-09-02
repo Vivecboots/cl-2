@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppIconTitle extends StatelessWidget {
@@ -16,7 +15,7 @@ class AppIconTitle extends StatelessWidget {
           SizedBox(width: 5.0),
           Text(
             'lorem',
-            style: Theme.of(context).textTheme.headline2,
+            style: Theme.of(context).textTheme.headlineMedium,
           )
         ],
       ),

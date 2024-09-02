@@ -14,7 +14,7 @@ class RoundedOutlinedButton extends StatelessWidget {
         child: OutlineButton(
           highlightedBorderColor: kAccentColor,
           borderSide: BorderSide(color: kSecondaryColor, width: 2.0),
-          child: Text(text, style: Theme.of(context).textTheme.button),
+          child: Text(text, style: Theme.of(context).textTheme.labelLarge),
           onPressed: onPressed,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25),

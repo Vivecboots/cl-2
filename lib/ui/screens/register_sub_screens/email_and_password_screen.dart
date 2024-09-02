@@ -15,11 +15,11 @@ class EmailAndPasswordScreen extends StatelessWidget {
       children: [
         Text(
           'My Email and',
-          style: Theme.of(context).textTheme.headline3,
+          style: Theme.of(context).textTheme.displaySmall,
         ),
         Text(
           'Password is',
-          style: Theme.of(context).textTheme.headline3,
+          style: Theme.of(context).textTheme.displaySmall,
         ),
         SizedBox(height: 25),
         BorderedTextField(

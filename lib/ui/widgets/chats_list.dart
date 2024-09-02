@@ -53,8 +53,7 @@ class _ChatsListState extends State<ChatsList> {
       itemBuilder: (BuildContext _, int index) => ChatListTile(
         chatWithUser: widget.chatWithUserList[index],
         onTap: () {
-          if (widget.chatWithUserList[index].chat.lastMessage != null &&
-              changeMessageSeen(index)) {
+          if (changeMessageSeen(index)) {
             widget.chatWithUserList[index].chat.lastMessage.seen = true;
             chatUpdated();
           }

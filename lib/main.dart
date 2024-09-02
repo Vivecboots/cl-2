@@ -29,21 +29,17 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         theme: ThemeData(
           fontFamily: kFontFamily,
-          accentColor: kSecondaryColor,
-          buttonColor: kAccentColor,
           indicatorColor: kAccentColor,
-          primarySwatch:
-              MaterialColor(kBackgroundColorInt, kThemeMaterialColor),
           scaffoldBackgroundColor: kPrimaryColor,
           hintColor: kSecondaryColor,
           textTheme: TextTheme(
-            headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-            headline2: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
-            headline3: TextStyle(fontSize: 38.0, fontWeight: FontWeight.bold),
-            headline4: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
-            bodyText1: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
-            bodyText2: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold),
-            button: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+            displayLarge: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+            displayMedium: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
+            displaySmall: TextStyle(fontSize: 38.0, fontWeight: FontWeight.bold),
+            headlineMedium: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+            bodyLarge: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            bodyMedium: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold),
+            labelLarge: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
           ).apply(
             bodyColor: kSecondaryColor,
             displayColor: kSecondaryColor,
@@ -55,7 +51,7 @@ class MyApp extends StatelessWidget {
             textTheme: ButtonTextTheme.accent,
             highlightColor: Color.fromRGBO(0, 0, 0, .3),
             focusColor: Color.fromRGBO(0, 0, 0, .3),
-          ),
+          ), colorScheme: ColorScheme.fromSwatch(primarySwatch: MaterialColor(kBackgroundColorInt, kThemeMaterialColor)).copyWith(secondary: kSecondaryColor),
         ),
         initialRoute: SplashScreen.id,
         routes: {
